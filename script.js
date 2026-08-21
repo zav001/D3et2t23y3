@@ -1,15 +1,12 @@
 /* Gooba Client — centralized project configuration */
 const SITE_CONFIG = {
   name: "Gooba Client",
-  version: "YOUR_VERSION",
+  version: "1.0.0",
   minecraftVersion: "1.21.11",
   // Direct GitHub release asset. Example:
   // https://github.com/USERNAME/REPOSITORY/releases/download/v1.0.0/gooba-client.jar
   downloadUrl: "https://github.com/zav001/D3et2t23y3/releases/download/v1/GoobaaClient.1.21.11.jar",
-  // Repository homepage. Example:
-  // https://github.com/USERNAME/REPOSITORY
-  githubUrl: "https://github.com/zav001/D3et2t23y3",
-  openSource: true
+  openSource: false
 };
 
 const FEATURES = [
@@ -38,13 +35,6 @@ const setConfig = () => {
     el.href = SITE_CONFIG.downloadUrl;
     if (SITE_CONFIG.downloadUrl.startsWith("YOUR_")) el.classList.add("is-placeholder");
   });
-  document.querySelectorAll(".github-link").forEach(el => {
-    el.href = SITE_CONFIG.githubUrl;
-    if (SITE_CONFIG.githubUrl.startsWith("YOUR_")) el.classList.add("is-placeholder");
-  });
-  if (SITE_CONFIG.openSource) {
-    document.querySelector("#open-source-stat").innerHTML = "<strong>Open Source</strong><span>Source available on GitHub</span>";
-  }
 };
 
 const renderFeatures = () => {
