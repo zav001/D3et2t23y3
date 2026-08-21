@@ -2,13 +2,13 @@
 const SITE_CONFIG = {
   name: "Gooba Client",
   version: "YOUR_VERSION",
-  minecraftVersion: "YOUR_MINECRAFT_VERSION",
+  minecraftVersion: "1.21.11",
   // Direct GitHub release asset. Example:
   // https://github.com/USERNAME/REPOSITORY/releases/download/v1.0.0/gooba-client.jar
-  downloadUrl: "YOUR_GITHUB_DIRECT_DOWNLOAD_URL",
+  downloadUrl: "https://github.com/zav001/D3et2t23y3/releases/download/v1/GoobaaClient.1.21.11.jar",
   // Repository homepage. Example:
   // https://github.com/USERNAME/REPOSITORY
-  githubUrl: "YOUR_GITHUB_REPOSITORY_URL",
+  githubUrl: "https://github.com/zav001/D3et2t23y3",
   openSource: false
 };
 
