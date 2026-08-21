@@ -9,7 +9,7 @@ const SITE_CONFIG = {
   // Repository homepage. Example:
   // https://github.com/USERNAME/REPOSITORY
   githubUrl: "https://github.com/zav001/D3et2t23y3",
-  openSource: false
+  openSource: true
 };
 
 const FEATURES = [
