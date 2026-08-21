@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07100c">
+  <meta name="description" content="Gooba Client — a lightweight Minecraft client built for the way you play.">
+  <title>Gooba Client — Minecraft Client</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <header class="nav-wrap" id="top">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Gooba Client home">
+        <span class="brand-mark">G</span>
+        <span>Gooba Client</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#installation">Installation</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta download-link" href="#" target="_blank" rel="noopener">Download Gooba <span>↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="status-dot"></span><span data-site-version>YOUR VERSION</span> · Fabric</div>
+          <h1>Play Minecraft.<br><em>Make it yours.</em></h1>
+          <p class="hero-lead">A lightweight Minecraft client built for the way you play.</p>
+          <p class="hero-body">Gooba is a modern Fabric-based client focused on performance, customization, utility, and a clean user experience — without unnecessary clutter.</p>
+          <div class="hero-actions">
+            <a class="button button-primary download-link" href="#" target="_blank" rel="noopener">Download Gooba <span>↓</span></a>
+            <a class="button button-ghost" href="#features">Explore Features <span>→</span></a>
+          </div>
+          <div class="compat">
+            <span>Fabric</span><i></i><span data-mc-version>YOUR MINECRAFT VERSION</span><i></i><span>Windows / macOS / Linux</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Gooba client interface preview">
+          <div class="orb"></div>
+          <div class="mock-window">
+            <div class="window-bar">
+              <div class="window-dots"><span></span><span></span><span></span></div>
+              <span>GOOBA / HUD</span>
+              <span class="live-pill">LIVE PREVIEW</span>
+            </div>
+            <div class="mock-body">
+              <div class="game-scene">
+                <div class="sky-grid"></div>
+                <div class="crosshair"></div>
+                <div class="pixel-hill hill-a"></div>
+                <div class="pixel-hill hill-b"></div>
+                <div class="hud-top">
+                  <span>GOOBA</span>
+                  <span>FPS <b>240</b></span>
+                  <span>XYZ <b>128 / 64 / -42</b></span>
+                </div>
+                <div class="module-panel">
+                  <div class="module-title">MODULES</div>
+                  <div><span>Performance</span><b>ON</b></div>
+                  <div><span>Coordinates</span><b>ON</b></div>
+                  <div><span>Keystrokes</span><b>ON</b></div>
+                  <div><span>Visuals</span><b>ON</b></div>
+                </div>
+                <div class="key-display"><kbd>W</kbd><div><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></div></div>
+                <div class="hotbar"><span></span><span></span><span class="active"></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              </div>
+              <div class="side-panel">
+                <div class="side-title"><span>Settings</span><span>•••</span></div>
+                <div class="setting"><span>Performance</span><strong>ON</strong></div>
+                <div class="setting"><span>HUD Editor</span><strong>ON</strong></div>
+                <div class="setting"><span>Visuals</span><strong>ON</strong></div>
+                <div class="meter"><span>Memory</span><b>2.8 GB</b><i><u></u></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="floating-card floating-one"><span class="mini-icon">✦</span><div><b>Lightweight</b><small>Built for smooth play</small></div></div>
+          <div class="floating-card floating-two"><span class="mini-icon">◈</span><div><b>Fabric Ready</b><small>Simple mod ecosystem</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust section-sm">
+      <div class="container trust-grid">
+        <div class="trust-item"><strong>Lightweight</strong><span>Built with performance in mind</span></div>
+        <div class="trust-item"><strong>Fabric</strong><span>Designed for the Fabric ecosystem</span></div>
+        <div class="trust-item" id="open-source-stat"><strong>Configurable</strong><span>Make the client fit your playstyle</span></div>
+      </div>
+    </section>
+
+    <section class="section features" id="features">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="kicker">THE TOOLKIT</span>
+          <h2>Everything you need.<br><em>Nothing you don't.</em></h2>
+          <p>Focused utilities, a clean interface, and room to make the experience your own.</p>
+        </div>
+        <div class="feature-grid" id="feature-grid"></div>
+      </div>
+    </section>
+
+    <section class="section showcase" id="showcase">
+      <div class="container showcase-grid">
+        <div class="showcase-copy reveal">
+          <span class="kicker">CLIENT PREVIEW</span>
+          <h2>Built for Minecraft.<br><em>Designed for you.</em></h2>
+          <p>Gooba keeps useful information close and the interface out of your way. The preview is a CSS-built concept UI — not a claim about shipped modules.</p>
+          <div class="preview-points">
+            <div><span>01</span><b>Clean HUD</b><small>Keep the information that matters visible.</small></div>
+            <div><span>02</span><b>Quick controls</b><small>Settings designed around fast access.</small></div>
+            <div><span>03</span><b>Low clutter</b><small>A focused interface with sensible defaults.</small></div>
+          </div>
+        </div>
+        <div class="large-preview reveal">
+          <div class="preview-top"><span>GOOBA CLIENT</span><span>1.21.x / FABRIC</span></div>
+          <div class="preview-content">
+            <aside><div class="logo-tile">G</div><a class="selected">Dashboard</a><a>Modules</a><a>HUD</a><a>Visuals</a><a>Settings</a></aside>
+            <div class="dashboard">
+              <div class="dash-header"><div><small>WELCOME BACK</small><h3>Your workspace</h3></div><div class="profile-dot">G</div></div>
+              <div class="dash-cards"><div><small>FPS</small><b>240</b><span>Stable</span></div><div><small>MEMORY</small><b>2.8 GB</b><span>Healthy</span></div><div><small>PROFILE</small><b>Default</b><span>Editable</span></div></div>
+              <div class="dash-row"><div><small>ACTIVE MODULES</small><h4>Performance</h4><div class="progress"><i></i></div><p>Optimized configuration</p></div><div><small>QUICK SETTINGS</small><label><span>Custom HUD</span><i class="switch on"></i></label><label><span>Visual effects</span><i class="switch on"></i></label><label><span>Compact mode</span><i class="switch"></i></label></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section installation" id="installation">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <span class="kicker">GET STARTED</span>
+          <h2>Three steps.<br><em>Then you're in.</em></h2>
+          <p>Keep the setup simple. Update these instructions if your actual release has different dependencies.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><span>01</span><div class="step-icon">↓</div><h3>Download</h3><p>Download the latest Gooba <code>.jar</code> directly from the configured GitHub release asset.</p><a class="text-link download-link" href="#" target="_blank" rel="noopener">Get the jar →</a></div>
+          <div class="step reveal"><span>02</span><div class="step-icon">✦</div><h3>Install Fabric</h3><p>Install the required Fabric Loader and Fabric API version for the Minecraft version you are running.</p><a class="text-link" href="https://fabricmc.net/use/installer/" target="_blank" rel="noopener">Fabric installer →</a></div>
+          <div class="step reveal"><span>03</span><div class="step-icon">▶</div><h3>Launch</h3><p>Place Gooba in your Minecraft <code>mods</code> directory and launch Minecraft using the matching Fabric profile.</p><a class="text-link" href="#faq">Read the FAQ →</a></div>
+        </div>
+        <div class="download-band reveal">
+          <div><span class="kicker">READY WHEN YOU ARE</span><h3>Keep your setup clean.</h3></div>
+          <a class="button button-primary download-link" href="#" target="_blank" rel="noopener">Download Gooba <span>↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section github-section">
+      <div class="container github-card reveal">
+        <div class="github-mark">◉</div>
+        <div><span class="kicker">OPEN DEVELOPMENT</span><h2>Built in the open.</h2><p>Explore the source, follow development, report issues, and see what's coming next.</p></div>
+        <div class="github-actions"><a class="button button-ghost github-link" href="#" target="_blank" rel="noopener">View on GitHub <span>↗</span></a><a class="button button-primary download-link" href="#" target="_blank" rel="noopener">Latest Release <span>↓</span></a></div>
+      </div>
+    </section>
+
+    <section class="section version-section">
+      <div class="container version-card reveal">
+        <div><span class="kicker">COMPATIBILITY</span><h2>Know your setup.</h2><p>Version details live in one configuration object so the site stays easy to maintain.</p></div>
+        <div class="version-grid"><div><small>Current Version</small><b data-site-version>YOUR VERSION</b></div><div><small>Minecraft</small><b data-mc-version>YOUR MINECRAFT VERSION</b></div><div><small>Loader</small><b>Fabric</b></div></div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container faq-grid">
+        <div class="section-heading reveal"><span class="kicker">FAQ</span><h2>Good to know.</h2><p>Answers are intentionally editable and avoid claims that aren't backed by your actual project.</p></div>
+        <div class="accordion reveal" id="faq-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-main">
+      <div><a class="brand" href="#top"><span class="brand-mark">G</span><span>Gooba Client</span></a><p>A lightweight Minecraft client built for the way you play.</p></div>
+      <div class="footer-links"><a href="#top">Home</a><a href="#features">Features</a><a href="#installation">Installation</a><a href="#faq">FAQ</a><a class="github-link" href="#" target="_blank" rel="noopener">GitHub</a><a class="download-link" href="#" target="_blank" rel="noopener">Download</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 Gooba Client</span><span>Gooba Client is an independent project and is not affiliated with Mojang or Microsoft.</span></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
