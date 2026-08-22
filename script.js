@@ -6,16 +6,16 @@ const SITE_CONFIG = {
   // Direct GitHub release asset. Example:
   // https://github.com/USERNAME/REPOSITORY/releases/download/v1.0.0/gooba-client.jar
   downloadUrl: "https://github.com/zav001/D3et2t23y3/releases/download/v1/GoobaaClient.1.21.11.jar",
-  openSource: false
+  openSource: true
 };
 
 const FEATURES = [
   { icon: "↯", name: "Performance", description: "Optimized for a smooth Minecraft experience." },
-  { icon: "⌗", name: "Custom HUD", description: "Build a HUD that fits your playstyle." },
-  { icon: "◈", name: "Visuals", description: "Useful visual customization and overlays." },
-  { icon: "◇", name: "Mod Support", description: "Designed to work cleanly with the Fabric ecosystem." },
-  { icon: "⚙", name: "Configurable", description: "Customize features and settings to your preferences." },
-  { icon: "○", name: "Lightweight", description: "Keep unnecessary overhead to a minimum." }
+  { icon: "▣", name: "Custom HUD", description: "Build a HUD that fits your playstyle." },
+  { icon: "◉", name: "Visuals", description: "Useful visual customization and overlays." },
+  { icon: "✣", name: "Mod Support", description: "Designed to work cleanly with the Fabric ecosystem." },
+  { icon: "☷", name: "Configurable", description: "Customize features and settings to your preferences." },
+  { icon: "➤", name: "Lightweight", description: "Keep unnecessary overhead to a minimum." }
 ];
 
 const FAQS = [
