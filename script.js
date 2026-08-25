@@ -1,11 +1,11 @@
-/* Gooba Client — centralized project configuration */
+/* DonutSMP Client — centralized project configuration */
 const SITE_CONFIG = {
-  name: "Gooba Client",
+  name: "DonutSMP Client",
   version: "1.0.0",
   minecraftVersion: "1.21.11",
   // Direct GitHub release asset. Example:
   // https://github.com/USERNAME/REPOSITORY/releases/download/v1.0.0/gooba-client.jar
-  downloadUrl: "https://github.com/zav001/D3et2t23y3/releases/download/v1/GoobaaClient.1.21.11.jar",
+  downloadUrl: "https://github.com/zav001/D3et2t23y3/releases/download/v1/DonutSMPaClient.1.21.11.jar",
   openSource: false
 };
 
@@ -19,11 +19,11 @@ const FEATURES = [
 ];
 
 const FAQS = [
-  ["What is Gooba Client?", "Gooba Client is a planned modern, lightweight Minecraft client for the Fabric ecosystem. Update this answer with the project's exact shipped functionality before publishing."],
+  ["What is DonutSMP Client?", "DonutSMP Client is a planned modern, lightweight Minecraft client for the Fabric ecosystem. Update this answer with the project's exact shipped functionality before publishing."],
   ["Which Minecraft versions are supported?", "The supported version is controlled by SITE_CONFIG.minecraftVersion in script.js. Replace the placeholder with the actual supported version or version range."],
-  ["Does Gooba require Fabric?", "The site is written for a Fabric-based client. Confirm the exact Fabric Loader and Fabric API requirements for the release before publishing."],
-  ["How do I install Gooba?", "Download the configured release JAR, install the required Fabric setup, place Gooba in the appropriate mods directory, and launch the matching Fabric profile."],
-  ["Where can I download Gooba?", "Use the Download Gooba buttons after setting SITE_CONFIG.downloadUrl to the direct GitHub release asset URL. The template intentionally does not invent a repository or release."],
+  ["Does DonutSMP require Fabric?", "The site is written for a Fabric-based client. Confirm the exact Fabric Loader and Fabric API requirements for the release before publishing."],
+  ["How do I install DonutSMP?", "Download the configured release JAR, install the required Fabric setup, place DonutSMP in the appropriate mods directory, and launch the matching Fabric profile."],
+  ["Where can I download DonutSMP?", "Use the Download DonutSMP buttons after setting SITE_CONFIG.downloadUrl to the direct GitHub release asset URL. The template intentionally does not invent a repository or release."],
   ["Where is the source code?", "Set SITE_CONFIG.githubUrl to the real public repository. If the project is not public, keep openSource false and remove the GitHub source-code claim."],
   ["How do I report a bug?", "Once the GitHub repository is configured, use its Issues area for bug reports. Add a direct issue URL here if your project uses a different tracker."]
 ];
