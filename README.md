@@ -1,6 +1,6 @@
-# Gooba Client Website
+# Gooba Client — DonutSMP 1.21.11 Website
 
-A static, responsive landing page for Gooba Client.
+A static, responsive landing page for Gooba Client, built for DonutSMP on Minecraft 1.21.11.
 
 ## Download setup
 
