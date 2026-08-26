@@ -5,7 +5,7 @@ const SITE_CONFIG = {
   minecraftVersion: "1.21.11",
   // Direct GitHub release asset. Example:
   // https://github.com/USERNAME/REPOSITORY/releases/download/v1.0.0/gooba-client.jar
-  downloadUrl: "https://github.com/zav001/D3et2t23y3/releases/download/v1/DonutSMPaClient.1.21.11.jar",
+  downloadUrl: "https://github.com/zav001/D3et2t23y3/releases/download/v1/GoobaaClient.1.21.11.jar",
   openSource: false
 };
 
