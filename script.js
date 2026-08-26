@@ -31,10 +31,6 @@ const FAQS = [
 const setConfig = () => {
   document.querySelectorAll("[data-site-version]").forEach(el => el.textContent = SITE_CONFIG.version);
   document.querySelectorAll("[data-mc-version]").forEach(el => el.textContent = SITE_CONFIG.minecraftVersion);
-  document.querySelectorAll(".download-link").forEach(el => {
-    el.href = SITE_CONFIG.downloadUrl;
-    if (SITE_CONFIG.downloadUrl.startsWith("YOUR_")) el.classList.add("is-placeholder");
-  });
 };
 
 const renderFeatures = () => {
