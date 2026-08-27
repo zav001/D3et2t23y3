@@ -7,12 +7,12 @@ const SITE_CONFIG = {
 };
 
 const FEATURES = [
-  ["↯","Performance","Optimized for a smooth Minecraft experience."],
+  ["↯","Performance","Optimized for smooth gameplay on DonutSMP."],
   ["▣","Custom HUD","Build a HUD that fits your playstyle."],
   ["◉","Visuals","Useful visual customization and overlays."],
   ["✚","Mod Support","Designed to work cleanly with the Fabric ecosystem."],
   ["☷","Configurable","Customize features and settings to your preferences."],
-  ["⌁","Lightweight","Keep unnecessary overhead to a minimum."]
+  ["⌁","DonutSMP Focused","Built specifically around the DonutSMP experience."]
 ];
 
 const FAQS = [
