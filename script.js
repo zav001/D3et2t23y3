@@ -1,55 +1,49 @@
-/* Gooba Client — centralized project configuration */
 const SITE_CONFIG = {
-  name: "Gooba Client",
+  name: "Goobaa Client",
   version: "1.0.0",
   minecraftVersion: "1.21.11",
-  // Direct GitHub release asset. Example:
-  // https://github.com/USERNAME/REPOSITORY/releases/download/v1.0.0/gooba-client.jar
-  downloadUrl: "https://github.com/zav001/D3et2t23y3/releases/download/v1/GoobaaClient.1.21.11.jar",
-  openSource: false
+  discordUrl: "https://discord.gg/goobaa",
+  downloadUrl: "https://github.com/zav001/D3et2t23y3/releases/download/v1/GoobaaClient.1.21.11.jar"
 };
 
 const FEATURES = [
-  { icon: "↯", name: "Performance", description: "Optimized for a smooth Minecraft experience." },
-  { icon: "⌗", name: "Custom HUD", description: "Build a HUD that fits your playstyle." },
-  { icon: "◈", name: "Visuals", description: "Useful visual customization and overlays." },
-  { icon: "◇", name: "Mod Support", description: "Designed to work cleanly with the Fabric ecosystem." },
-  { icon: "⚙", name: "Configurable", description: "Customize features and settings to your preferences." },
-  { icon: "○", name: "Lightweight", description: "Keep unnecessary overhead to a minimum." }
+  ["↯","Performance","Optimized for a smooth Minecraft experience."],
+  ["▣","Custom HUD","Build a HUD that fits your playstyle."],
+  ["◉","Visuals","Useful visual customization and overlays."],
+  ["✚","Mod Support","Designed to work cleanly with the Fabric ecosystem."],
+  ["☷","Configurable","Customize features and settings to your preferences."],
+  ["⌁","Lightweight","Keep unnecessary overhead to a minimum."]
 ];
 
 const FAQS = [
-  ["What is Gooba Client?", "Gooba Client is a focused Minecraft client for DonutSMP on the Fabric ecosystem and Minecraft 1.21.11. Update this answer with the project's exact shipped functionality before publishing."],
-  ["Which Minecraft versions are supported?", "The supported version is controlled by SITE_CONFIG.minecraftVersion in script.js. Replace the placeholder with the actual supported version or version range."],
-  ["Does Gooba Client require Fabric?", "The site is written for a Fabric-based client. Confirm the exact Fabric Loader and Fabric API requirements for the release before publishing."],
-  ["How do I install Gooba Client?", "Download the configured release JAR, install the required Fabric setup, place Gooba Client in the appropriate mods directory, and launch the matching Fabric profile."],
-  ["Where can I download Gooba Client?", "Use the Download Gooba buttons after setting SITE_CONFIG.downloadUrl to the direct GitHub release asset URL. The template intentionally does not invent a repository or release."],
-  ["Where is the source code?", "Set SITE_CONFIG.githubUrl to the real public repository. If the project is not public, keep openSource false and remove the GitHub source-code claim."],
-  ["How do I report a bug?", "Once the GitHub repository is configured, use its Issues area for bug reports. Add a direct issue URL here if your project uses a different tracker."]
+  ["What is Goobaa Client?","Goobaa Client is a focused Minecraft client for DonutSMP built around the Fabric ecosystem and Minecraft 1.21.11."],
+  ["Which Minecraft version is supported?","The current site configuration targets Minecraft 1.21.11. Update SITE_CONFIG in script.js when the supported version changes."],
+  ["Does Goobaa Client require Fabric?","Yes. Goobaa is presented as a Fabric-based client, so install the matching Fabric Loader and Fabric API before launching."],
+  ["How do I install Goobaa Client?","Download the JAR, install Fabric for Minecraft 1.21.11, place the Goobaa JAR in your .minecraft/mods folder, then launch the matching Fabric profile."],
+  ["Where can I download Goobaa Client?","Use any of the Download Goobaa buttons on this page. They point to the configured GitHub release asset."],
+  ["Where can I get help?","Use the project's normal community or repository support channel. Add a Discord or issue-tracker link here if you have one."]
 ];
 
-const setConfig = () => {
-  document.querySelectorAll("[data-site-version]").forEach(el => el.textContent = SITE_CONFIG.version);
-  document.querySelectorAll("[data-mc-version]").forEach(el => el.textContent = SITE_CONFIG.minecraftVersion);
-};
-
-const renderFeatures = () => {
-  document.querySelector("#feature-grid").innerHTML = FEATURES.map(f => `
+function renderFeatures(){
+  document.querySelector("#feature-grid").innerHTML = FEATURES.map(([icon,name,description]) => `
     <article class="feature-card reveal">
-      <div class="feature-icon">${f.icon}</div>
-      <h3>${f.name}</h3>
-      <p>${f.description}</p>
-    </article>`).join("");
-};
+      <div class="feature-icon">${icon}</div>
+      <h3>${name}</h3>
+      <p>${description}</p>
+    </article>
+  `).join("");
+}
 
-const renderFaq = () => {
-  document.querySelector("#faq-list").innerHTML = FAQS.map(([q,a], i) => `
+function renderFaq(){
+  document.querySelector("#faq-list").innerHTML = FAQS.map(([q,a]) => `
     <div class="accordion-item">
       <button class="accordion-button" type="button" aria-expanded="false">
         <span>${q}</span><span>+</span>
       </button>
       <div class="accordion-answer"><p>${a}</p></div>
-    </div>`).join("");
+    </div>
+  `).join("");
+
   document.querySelectorAll(".accordion-button").forEach(button => {
     button.addEventListener("click", () => {
       const answer = button.nextElementSibling;
@@ -59,9 +53,17 @@ const renderFaq = () => {
       answer.style.maxHeight = open ? null : `${answer.scrollHeight}px`;
     });
   });
-};
+}
 
-const init = () => {
+function setConfig(){
+  document.querySelectorAll("[data-site-version]").forEach(el => el.textContent = SITE_CONFIG.version);
+  document.querySelectorAll("[data-mc-version]").forEach(el => el.textContent = SITE_CONFIG.minecraftVersion);
+  document.querySelectorAll('a[download]').forEach(a => {
+    a.href = SITE_CONFIG.downloadUrl;
+  });
+}
+
+function init(){
   setConfig();
   renderFeatures();
   renderFaq();
@@ -69,26 +71,31 @@ const init = () => {
   const nav = document.querySelector(".nav-wrap");
   const menu = document.querySelector(".menu-toggle");
   const links = document.querySelector("#nav-links");
-  const toggle = () => {
+
+  menu.addEventListener("click", () => {
     const open = links.classList.toggle("open");
     menu.setAttribute("aria-expanded", String(open));
-  };
-  menu.addEventListener("click", toggle);
+  });
+
   links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
     links.classList.remove("open");
     menu.setAttribute("aria-expanded", "false");
   }));
-  window.addEventListener("scroll", () => nav.classList.toggle("scrolled", window.scrollY > 8), { passive: true });
+
+  window.addEventListener("scroll", () => {
+    nav.classList.toggle("scrolled", window.scrollY > 8);
+  }, {passive:true});
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
+      if(entry.isIntersecting){
         entry.target.classList.add("visible");
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.08 });
+  }, {threshold:.08});
+
   document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-};
+}
 
 document.addEventListener("DOMContentLoaded", init);
