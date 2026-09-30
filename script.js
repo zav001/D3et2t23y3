@@ -3,7 +3,7 @@ const SITE_CONFIG = {
   version: "1.0.0",
   minecraftVersion: "1.21.11",
   discordUrl: "https://discord.gg/goobaa",
-  downloadUrl: "https://github.com/zav001/D3et2t23y3/releases/download/v1/GoobaaClient.1.21.11.jar"
+  downloadUrl: "https://github.com/zav001/D3et2t23y3/releases/download/v3t354/GoobaaClient.1.21.11.jar"
 };
 
 const FEATURES = [
